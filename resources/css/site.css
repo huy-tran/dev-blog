@@ -6,6 +6,10 @@
     }
 }
 
+html {
+    font-size: 18px;
+}
+
 .embed-responsive {
     position: relative;
     display: block;

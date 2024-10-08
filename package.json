@@ -15,5 +15,9 @@
         "tailwindcss": "^3.0.19",
         "vite": "^5.0.0",
         "vue-template-compiler": "^2.6.12"
+    },
+    "volta": {
+        "node": "20.17.0",
+        "yarn": "4.5.0"
     }
 }

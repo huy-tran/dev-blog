@@ -1,18 +1,16 @@
 title: Settings
 data:
-  site_name: 'Hygo Dev Blog'
+  site_name: 'Huy Tran - Dev Blog'
   personality: casual
-  show_signup: true
+  show_signup: false
   social:
     -
-      name: Twitter
-      url: 'https://twitter.com/statamic'
-      icon: site/social-icons/twitter.svg
-    -
+      id: gm1tVoeo
       name: Github
-      url: 'https://github.com/statamic/starter-kit-starters-creek'
+      url: 'https://github.com/huy-tran'
       icon: site/social-icons/github.svg
     -
+      id: QmcMOfcu
       name: Email
-      url: 'mailto:jack@statamic.com'
+      url: 'mailto:hygo.tran@gmail.com'
       icon: site/social-icons/email.svg

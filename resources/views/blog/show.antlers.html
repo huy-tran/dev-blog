@@ -1,42 +1,48 @@
 <article class="max-w-5xl mx-auto px-3">
-    <header class="mx-auto max-w-3xl text-center content">
-        <h1>{{ $title }}</h1>
-        {{ $intro }}
-        <div class="my-12 flex items-center justify-center">
-            {{ if $author }}
-            <img src="{{ $author:avatar ?? $author:email | gravatar(160) }}" class="h-20 w-20 my-0 rounded-full mr-4">
-            {{ /if }}
-            <div class="text-left">
-                {{ if author }}
-                <div>
-                    <a class="font-bold no-underline" href="/authors/{{ $author:handle }}">
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-hot-pink to-purple-500">
-                            {{ $author:name }}
-                        </span>
-                    </a>
-                </div>
-                {{ /if }}
-                <time datetime="{{ $date | format('Y-m-d') }}">{{ $date }}</time>
-            </div>
-        </div>
-    </header>
-    <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
-    <section class="max-w-3xl mx-auto py-6 lg:py-12 content">
-        {{ main_content }}
-            {{ if $type == "text" }}
-                {{ $text }}
-            {{ elseif $type == "code_block" }}
-<pre class="language-{{ $mode ?? 'php' }} rounded"><code>{{ $code }}</code></pre>
-            {{ elseif $type == "image" }}
-                <figure>
-                    <img src="{{ $image }}" alt="{{ $caption }}" />
-                    <figcaption>{{ $caption }}</figcaption>
-                </figure>
-            {{ /if }}
-        {{ /main_content }}
-    </section>
+  <header class="mx-auto max-w-3xl text-center content">
+    <div class="squiggle text-center bg-accent text-white">
+      <h1>{{ $title }}</h1>
+    </div>
 
-    {{ if $settings:show_signup }}
-        {{ partial:sign-up}}
-    {{ /if }}
+  </header>
+
+  <img class="rounded-xl mx-auto" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
+
+  <section class="max-w-3xl mx-auto py-6 lg:py-12 content">
+    <div class="mb-6">
+      <span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded">
+        <svg
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6 mr-2"
+        >
+          <path
+            stroke-linecap="round" stroke-linejoin="round"
+            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+          />
+        </svg>
+        <time datetime="{{ $date | format('Y-m-d') }}">{{ $date | format('d-m-Y') }}</time>
+      </span>
+    </div>
+
+    {{ main_content }}
+      {{ if $type == "text" }}
+        {{ $text }}
+      {{ elseif $type == "torchlight" }}
+        {{code_block}}
+          {{ torchlight :language="mode" }}
+          {{ code | noparse | entities }}
+          {{ /torchlight }}
+        {{/code_block}}
+      {{ elseif $type == "image" }}
+      <figure>
+        <img src="{{ $image }}" alt="{{ $caption }}"/>
+        <figcaption>{{ $caption }}</figcaption>
+      </figure>
+      {{ /if }}
+    {{ /main_content }}
+  </section>
+
+  {{ if $settings:show_signup }}
+  {{ partial:sign-up}}
+  {{ /if }}
 </article>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "671b444c055e5b9841390cb94ca118d8",
+    "content-hash": "cebb6bdf4df15b922962c23e08a277c6",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4450,16 +4450,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v5.27.0",
+            "version": "v5.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "c2008b387e91444c66ad74672609edc1210adddb"
+                "reference": "d3f41a8c6c5a5e855c3f92a8942b303813373f98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/c2008b387e91444c66ad74672609edc1210adddb",
-                "reference": "c2008b387e91444c66ad74672609edc1210adddb",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d3f41a8c6c5a5e855c3f92a8942b303813373f98",
+                "reference": "d3f41a8c6c5a5e855c3f92a8942b303813373f98",
                 "shasum": ""
             },
             "require": {
@@ -4542,7 +4542,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v5.27.0"
+                "source": "https://github.com/statamic/cms/tree/v5.30.0"
             },
             "funding": [
                 {
@@ -4550,7 +4550,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-26T20:13:42+00:00"
+            "time": "2024-10-03T14:36:00+00:00"
         },
         {
             "name": "statamic/stringy",
@@ -7191,6 +7191,71 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
             },
             "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "torchlight/torchlight-laravel",
+            "version": "v0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
+                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/ecdabd33326f9b37da95032c971a340c4e3f4306",
+                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.2",
+                "illuminate/cache": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/http": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/view": "^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.3|^8.0",
+                "ramsey/uuid": "^3.7|^4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^9.0",
+                "phpunit/phpunit": "^8.5.23|^9.5|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Torchlight\\TorchlightServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "laravel",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.0"
+            },
+            "time": "2024-05-16T18:16:31+00:00"
         },
         {
             "name": "ueberdosis/tiptap-php",

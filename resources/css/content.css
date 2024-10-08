@@ -1,16 +1,20 @@
+body {
+    background: #fbe9d1;
+}
+
 .content {
     h1 {
-        @apply font-display uppercase font-bold leading-none;
+        @apply font-display uppercase font-bold leading-none text-secondary;
         margin-bottom: 1em;
 
-        font-size: min(max(3rem, 6.25vw), 7rem);
-        @supports (font-size: clamp(3rem, 6.25vw, 7rem)) {
-            font-size: clamp(3rem, 6.25vw, 7rem);
+        font-size: min(max(1.5rem, 6.25vw), 3rem);
+        @supports (font-size: clamp(1.5rem, 6.25vw, 3rem)) {
+            font-size: clamp(1.5rem, 6.25vw, 3rem);
         }
     }
 
     h2 {
-        @apply text-4xl font-bold leading-none mt-12 py-6 tracking-tight;
+        @apply text-2xl font-bold leading-none py-6 tracking-tight text-primary;
     }
 
     h3 {
@@ -21,14 +25,18 @@
         @apply font-bold uppercase tracking-widest leading-none py-6;
     }
 
-    > p {
-        @apply text-lg leading-relaxed;
-        margin-bottom: 2em;
+    p + p {
+        @apply mt-4;
     }
 
-    > p:first-of-type {
-        @apply text-2xl;
-    }
+    /*> p {*/
+    /*    @apply text-lg leading-relaxed;*/
+    /*    margin-bottom: 2em;*/
+    /*}*/
+
+    /*> p:first-of-type {*/
+    /*    @apply text-2xl;*/
+    /*}*/
 
     > blockquote {
         @apply text-center font-bold italic px-4 mb-12 pt-6 text-3xl leading-tight;
@@ -43,7 +51,7 @@
     }
 
     a {
-        @apply font-bold underline text-hot-pink;
+        @apply font-bold underline text-primary;
         &:hover {
             @apply text-black;
         }
@@ -72,11 +80,19 @@
     }
 
     pre, pre&, > ul li pre, > ol li pre {
-        @apply flex p-0 text-sm leading-loose mb-8;
+        @apply flex p-0 text-sm leading-loose my-6;
+    }
+
+    pre code {
+        @apply w-full;
     }
 
     pre code, pre code&, > ul li pre code, > ol li pre code {
         @apply p-4;
+    }
+
+    pre code .line-number {
+        @apply mr-2
     }
 
     table {
@@ -93,6 +109,14 @@
             @apply leading-normal;
         }
     }
+
+    blockquote {
+        @apply border-l-4 bg-gray-200 border-l-primary mb-0 p-4 my-4 text-left;
+
+        p {
+            @apply p-0 text-base font-normal;
+        }
+    }
 }
 
 .content section > *:first-child {
@@ -105,7 +129,7 @@
         @apply font-black normal-case;
     }
 
-    > p {
-        @apply leading-normal;
-    }
+    /*> p {*/
+    /*    @apply leading-normal;*/
+    /*}*/
 }

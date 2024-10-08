@@ -8,14 +8,16 @@ export default {
   ],
   theme: {
     extend: {
-        colors: {
-            'black': '#12151E',
-            'hot-pink': '#fd2d78'
-        },
-        fontFamily: {
-            display: "var(--font-display)",
-            body: "var(--font-body)",
-        }
+      colors: {
+        black: '#12151E',
+        primary: '#e64833',
+        secondary: '#244856',
+        accent: '#90aeae'
+      },
+      fontFamily: {
+        display: 'var(--font-display)',
+        body: 'var(--font-body)',
+      }
     },
   },
   plugins: [

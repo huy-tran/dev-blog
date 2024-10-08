@@ -11,7 +11,8 @@
         "php": "^8.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "statamic/cms": "^5.27"
+        "statamic/cms": "^5.27",
+        "torchlight/torchlight-laravel": "^0.6.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
